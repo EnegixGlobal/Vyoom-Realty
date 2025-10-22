@@ -1,0 +1,40 @@
+.carousel-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 0; /* keep it behind everything */
+}
+
+.carousel-side {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0; /* 🟢 ensure slides stay below hero section */
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1; /* 🟢 overlay stays above image but below hero */
+}

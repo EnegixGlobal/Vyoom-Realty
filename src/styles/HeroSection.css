@@ -1,0 +1,83 @@
+/* .hero-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  max-width: 48rem;
+}
+
+.hero-heading {
+  font-size: 3.75rem;
+  font-weight: bold;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: white;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+  max-width: 42rem;
+}
+
+.hero-button {
+  background-color: #f59e0b;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #d97706;
+} */
+
+
+
+.hero-container {
+  background: transparent; 
+  position: relative;
+  z-index: 20; /* ✅ add this just in case */
+  margin-top: 200px;
+}
+
+
+.hero-heading {
+  font-size: 3.75rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  margin-left: 3.5rem;
+  color: white; /* ensures text is visible */
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  color: white;
+  margin-left: 3.5rem;
+}
+
+.hero-button {
+  background-color: #D3A05D;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 3.5rem;
+}
+
+.hero-button:hover {
+  background-color: #d97706;
+}

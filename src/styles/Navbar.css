@@ -1,0 +1,68 @@
+/* Navbar.css */
+
+/* Navbar.css */
+nav {
+  position: fixed; /* add this */
+  top: 0;
+  left: 0;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  background-color: #1f293700; 
+  z-index: 50; 
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #D3A05D;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #fbbf24; /* optional hover effect */
+}
+
+.button {
+  background-color: #D3A05D;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #d97706d4;
+}
