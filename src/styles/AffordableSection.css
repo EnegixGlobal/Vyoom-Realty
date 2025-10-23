@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f8f8;
+  background-color: #ffffff;
 }
 
 .afcontainer {
@@ -35,7 +35,7 @@
 
 .image-heading {
   position: absolute;
-  bottom: 20px;
+  bottom : 10px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px;
@@ -43,7 +43,8 @@
   background: #d3a05d;
   border-radius: 2px;
   padding: 15px 20px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Right Column */
@@ -93,13 +94,13 @@
   font-weight: 700;
 }
 
-.btn {
+.btn-affordable {
   display: block;
   width: 100%;
   max-width: 200px;
   margin: 15px auto 0;
   padding: 15px 20px;
-  background-color: #d3a05d;
+  background-color: #D3A05D;
   color: #fff;
   border-radius: 4px;
   font-weight: 600;
@@ -109,8 +110,16 @@
   text-decoration: none;
 }
 
-.btn:hover {
-  background-color: #e9ae62;
+.btn-affordable:hover {
+  background-color: #e4963cfb;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 8px auto;
+  transition: all 0.3s ease;
 }
 
 /* Tablet styles */
@@ -148,9 +157,15 @@
     font-size: 15px;
   }
 
-  .btn {
+  .btn-affordable {
     padding: 18px 25px;
     font-size: 15px;
+  }
+
+   .divider {
+    width: 85%;
+    height: 1.2px;
+    margin: 10px auto;
   }
 }
 
@@ -173,9 +188,15 @@
     justify-content: flex-start;
   }
 
-  .btn {
+  .btn-affordable {
     margin: 15px 0 0;
     width: 200px;
+  }
+
+  .divider {
+    width: 90%;
+    height: 1.5px;
+    margin: 12px 0;
   }
 }
 
@@ -190,17 +211,17 @@
   }
 
   .hero-image {
-    width: 60%;
-    height: 50%;
-    margin-left: 120px;
+    width: 70%;
+    height: 80%;
+    margin-left: 100px;
   }
 
   .image-heading {
     position: absolute;
-    top: 298px;
-    left: 382px;
-    font-size: 27px;
-    padding: 30px 40px;
+    bottom: 1px;
+    left: 340px;
+    font-size: 22px;
+    padding: 20px 30px;
     transform: none;
   }
 
@@ -220,10 +241,18 @@
     font-size: 16px;
   }
 
-  .btn {
+  .btn-affordable {
     width: 25%;
     padding: 20px 10px;
     font-size: 14px;
   }
+
+  .divider {
+    width: 95%;
+    height: 1.5px;
+    margin: 12px 0;
+  }
 }
+
+
 

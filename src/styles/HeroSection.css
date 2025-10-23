@@ -33,10 +33,11 @@
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: 0.875rem;
+   font-family: inherit;
 }
 
 .hero-button:hover {
-  background-color: #d97706;
+  background-color: #e4963cfb;
 }
 
 /* Tablet styles */

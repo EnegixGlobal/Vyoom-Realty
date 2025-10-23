@@ -9,7 +9,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: rgba(31, 41, 55, 0.95);
+  background-color: rgb(31, 41, 55);
   backdrop-filter: blur(10px);
   z-index: 50;
   box-sizing: border-box;
@@ -45,27 +45,49 @@ nav {
   color: white;
   font-weight: 500;
   text-decoration: none;
+  position: relative;
   transition: color 0.3s;
   cursor: pointer;
 }
 
-.link:hover {
-  color: #fbbf24;
+/* Create underline effect */
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
 }
 
-.button {
+/* Hover and Active underline */
+.link:hover::after,
+.link.active::after {
+  width: 100%;
+}
+
+.link:hover {
+  color: #e1e1e1;
+}
+
+
+.button-nav {
   background-color: #D3A05D;
   color: white;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: inherit;
+   font-size: 1em;
 }
 
-.button:hover {
-  background-color: #d97706d4;
+.button-nav:hover {
+  background-color: #e4963cfb;
 }
 
 /* Mobile Menu Button */
@@ -134,10 +156,22 @@ nav {
   padding: 0.5rem 0;
 }
 
-.mobile-menu .button {
-  width: 100%;
-  padding: 1rem;
+.mobile-menu .button-nav-mobile {
+  width: 50%;
   font-size: 1rem;
+   background-color: #D3A05D;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: inherit;
+}
+
+.mobile-menu .button-nav-mobile:hover {
+  background-color: #d97706d4;
 }
 
 /* Responsive Design */

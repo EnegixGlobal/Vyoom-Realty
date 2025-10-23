@@ -1,0 +1,91 @@
+.success-stories {
+  position: relative;
+  background-image: url("../assets/images/residental-bg.jpg"); /* Replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mission-subtitle {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color:#000;
+  margin: 0;
+  
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  margin: 0;             
+  
+}
+
+.description {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.cta-container {
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: #d3a05d;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e4963cfb;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description,
+  .footer-text {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description,
+  .footer-text {
+    font-size: 0.9rem;
+  }
+}

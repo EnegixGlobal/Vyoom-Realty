@@ -4,24 +4,66 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Mission from "../components/Mission";
 import AffordableSection from "../components/AffordableSection";
+import ClientLogos from "../components/ClientLogos";
+import BenefitsSection from "../components/BenefitsSection";
+import ResidentialSection from "../components/ResidentialSection";
+import UpcomingSection from "../components/UpcomingSection";
+import WhatWeOfferSection from "../components/WhatWeOfferSection";
+import SuccessStories from "../components/SuccessStories";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div>
       {/* Hero Section with Carousel */}
-      <div className="relative w-full h-screen">
+      <div style={{ position: "relative", width: "100%", height: "100vh" }}>
         <ImageCarousel />
-        <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-6 md:px-8 lg:px-12 z-20">
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            padding: "0 1rem",
+            zIndex: 20,
+          }}
+        >
           <Navbar />
           <HeroSection />
         </div>
       </div>
-      
+
       {/* Mission Section */}
       <Mission />
-      
+
       {/* Affordable Section */}
       <AffordableSection />
+
+      {/* Client Logos Section */}
+      <ClientLogos />
+
+      {/* Benefits Section */}
+      <BenefitsSection />
+
+      {/* Residential Section */}
+      <ResidentialSection />
+
+      {/*Upcoming Section */}
+      <UpcomingSection />
+
+      {/*WhatWeOffer Section */}
+      <WhatWeOfferSection />
+
+      {/* SuccessStories Section */}
+      <SuccessStories />
+      
+      {/* Footer Section */}
+      <Footer/>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Navbar = () => {
                 <a href="#about" className="link">About Us</a>
                 <a href="#properties" className="link">Properties</a>
                 <a href="#contact" className="link">Contact Us</a>
-                <button className="button">Become A Member</button>
+                <button className="button-nav">Become A Member</button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <a href="#about" className="link" onClick={() => setIsMenuOpen(false)}>About Us</a>
                 <a href="#properties" className="link" onClick={() => setIsMenuOpen(false)}>Properties</a>
                 <a href="#contact" className="link" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
-                <button className="button" onClick={() => setIsMenuOpen(false)}>Become A Member</button>
+                <button className="button-nav-mobile" onClick={() => setIsMenuOpen(false)}>Become A Member</button>
             </div>
         </nav>
     );

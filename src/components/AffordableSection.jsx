@@ -34,13 +34,14 @@ const AffordableSection = () => {
                 <span className="feature-number">01.</span>
                 <span className="feature-text">Residential Plots</span>
               </div>
+              <div className="divider"></div>
               <div className="feature">
                 <span className="feature-number">02.</span>
                 <span className="feature-text">Home Construction</span>
               </div>
             </div>
 
-            <a href="/about-us" className="btn">
+            <a href="/about-us" className="btn-affordable">
               About Us
             </a>
           </div>
