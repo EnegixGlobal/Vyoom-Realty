@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import "../styles/Navbar.css";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <nav>
             <div className="logo">
@@ -13,12 +19,31 @@ const Navbar = () => {
                 <span className="logo-text">VYOOM</span>
             </div>
 
-            <div className="menu">
+            {/* Desktop Menu */}
+            <div className="menu desktop-menu">
                 <a href="#home" className="link">Home</a>
                 <a href="#about" className="link">About Us</a>
                 <a href="#properties" className="link">Properties</a>
                 <a href="#contact" className="link">Contact Us</a>
                 <button className="button">Become A Member</button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button className="mobile-menu-button" onClick={toggleMenu}>
+                <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+
+            {/* Mobile Menu */}
+            <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+                <a href="#home" className="link" onClick={() => setIsMenuOpen(false)}>Home</a>
+                <a href="#about" className="link" onClick={() => setIsMenuOpen(false)}>About Us</a>
+                <a href="#properties" className="link" onClick={() => setIsMenuOpen(false)}>Properties</a>
+                <a href="#contact" className="link" onClick={() => setIsMenuOpen(false)}>Contact Us</a>
+                <button className="button" onClick={() => setIsMenuOpen(false)}>Become A Member</button>
             </div>
         </nav>
     );

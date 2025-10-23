@@ -8,21 +8,22 @@ import AffordableSection from "../components/AffordableSection";
 const HomePage = () => {
   return (
     <div className="w-full overflow-hidden">
-      {/* Carousel Section */}
+      {/* Hero Section with Carousel */}
       <div className="relative w-full h-screen">
         <ImageCarousel />
-        <div className="absolute inset-0 flex flex-col justify-center items-start px-12 z-20">
+        <div className="absolute inset-0 flex flex-col justify-center items-start px-4 sm:px-6 md:px-8 lg:px-12 z-20">
           <Navbar />
           <HeroSection />
         </div>
-        
-        <Mission />
-        <AffordableSection />
-          
       </div>
+      
+      {/* Mission Section */}
+      <Mission />
+      
+      {/* Affordable Section */}
+      <AffordableSection />
     </div>
   );
 };
-
 
 export default HomePage;

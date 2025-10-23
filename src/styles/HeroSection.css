@@ -1,83 +1,109 @@
-/* .hero-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 3rem;
-  max-width: 48rem;
-}
-
-.hero-heading {
-  font-size: 3.75rem;
-  font-weight: bold;
-  color: white;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-}
-
-.hero-description {
-  font-size: 1.125rem;
-  color: white;
-  margin-bottom: 2rem;
-  line-height: 1.75;
-  max-width: 42rem;
-}
-
-.hero-button {
-  background-color: #f59e0b;
-  color: white;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  width: fit-content;
-  transition: background-color 0.3s;
-}
-
-.hero-button:hover {
-  background-color: #d97706;
-} */
-
-
-
 .hero-container {
   background: transparent; 
   position: relative;
-  z-index: 20; /* ✅ add this just in case */
-  margin-top: 200px;
+  z-index: 20;
+  margin-top: 120px;
+  padding: 0 1rem;
 }
 
-
 .hero-heading {
-  font-size: 3.75rem;
+  font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
-  margin-left: 3.5rem;
-  color: white; /* ensures text is visible */
+  margin-bottom: 1rem;
+  color: white;
+  text-align: left;
 }
 
 .hero-description {
-  font-size: 1.125rem;
-  line-height: 1.75;
-  margin-bottom: 2rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
   color: white;
-  margin-left: 3.5rem;
+  text-align: left;
 }
 
 .hero-button {
   background-color: #D3A05D;
   color: white;
   font-weight: 600;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-left: 3.5rem;
+  font-size: 0.875rem;
 }
 
 .hero-button:hover {
   background-color: #d97706;
+}
+
+/* Tablet styles */
+@media (min-width: 640px) {
+  .hero-container {
+    margin-top: 140px;
+    padding: 0 2rem;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-button {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .hero-container {
+    margin-top: 160px;
+    padding: 0 3rem;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1024px) {
+  .hero-container {
+    margin-top: 200px;
+    padding: 0 3.5rem;
+  }
+
+  .hero-heading {
+    font-size: 3.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
 }

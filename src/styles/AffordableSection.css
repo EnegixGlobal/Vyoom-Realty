@@ -1,5 +1,5 @@
 .affordable-section {
-  padding: 90px 40px;
+  padding: 40px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,9 +8,10 @@
 
 .afcontainer {
   display: flex;
-  max-width: 1500px;
+  flex-direction: column;
+  max-width: 1200px;
   width: 100%;
-  gap: 90px;
+  gap: 40px;
 }
 
 /* Columns */
@@ -21,48 +22,53 @@
 
 .left-column .image-wrapper {
   position: relative;
+  text-align: center;
 }
 
 .hero-image {
-  width: 60%;
-  height: 50%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   display: block;
-  margin-left: 120px;
+  margin: 0 auto;
 }
 
 .image-heading {
   position: absolute;
-    top: 298px;
-  left: 382px;
-  font-size: 27px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
   color: #fff;
   background: #d3a05d;
   border-radius: 2px;
-    padding: 30px 40px;
+  padding: 15px 20px;
+  text-align: center;
 }
 
 /* Right Column */
 .right-column .text-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  text-align: center;
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 14px;
   color: #A5A6AA;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   color: #222;
 }
 
 .description {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   color: #555;
 }
@@ -70,14 +76,15 @@
 .features {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .feature {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 14px;
   color: #222;
 }
 
@@ -88,20 +95,135 @@
 
 .btn {
   display: block;
-  width: 25%;
-  margin-top: 15px;
-  padding: 20px 10px; /* smaller padding */
-  background-color: #d3a05d; /* example purple */
+  width: 100%;
+  max-width: 200px;
+  margin: 15px auto 0;
+  padding: 15px 20px;
+  background-color: #d3a05d;
   color: #fff;
-  border-radius: 4px; /* slightly smaller corners */
+  border-radius: 4px;
   font-weight: 600;
-  font-size: 14px; 
+  font-size: 14px;
   transition: all 0.3s ease;
-  justify-content: center;
   text-align: center;
+  text-decoration: none;
 }
 
 .btn:hover {
   background-color: #e9ae62;
+}
+
+/* Tablet styles */
+@media (min-width: 640px) {
+  .affordable-section {
+    padding: 60px 30px;
+  }
+
+  .afcontainer {
+    gap: 50px;
+  }
+
+  .hero-image {
+    max-width: 500px;
+  }
+
+  .image-heading {
+    font-size: 20px;
+    padding: 20px 25px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .feature {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 18px 25px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .affordable-section {
+    padding: 80px 40px;
+  }
+
+  .afcontainer {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .right-column .text-content {
+    text-align: left;
+  }
+
+  .feature {
+    justify-content: flex-start;
+  }
+
+  .btn {
+    margin: 15px 0 0;
+    width: 200px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1024px) {
+  .affordable-section {
+    padding: 90px 40px;
+  }
+
+  .afcontainer {
+    gap: 90px;
+  }
+
+  .hero-image {
+    width: 60%;
+    height: 50%;
+    margin-left: 120px;
+  }
+
+  .image-heading {
+    position: absolute;
+    top: 298px;
+    left: 382px;
+    font-size: 27px;
+    padding: 30px 40px;
+    transform: none;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .feature {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 25%;
+    padding: 20px 10px;
+    font-size: 14px;
+  }
 }
 

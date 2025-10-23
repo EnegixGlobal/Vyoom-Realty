@@ -27,7 +27,8 @@ const ImageCarousel = () => {
 
   return (
     <div className="carousel-container">
-      <div className="carousel-side left-side">
+      {/* Desktop Layout - Side by Side */}
+      <div className="carousel-side left-side desktop-carousel">
         {leftImages.map((img, idx) => (
           <div
             key={idx}
@@ -39,7 +40,7 @@ const ImageCarousel = () => {
         ))}
       </div>
 
-      <div className="carousel-side right-side">
+      <div className="carousel-side right-side desktop-carousel">
         {rightImages.map((img, idx) => (
           <div
             key={idx}
@@ -51,12 +52,18 @@ const ImageCarousel = () => {
         ))}
       </div>
 
-      {/* Slide Indicators */}
-      {/* <SlideIndicators
-        currentSlide={currentSlide}
-        setCurrentSlide={setCurrentSlide}
-        totalSlides={totalSlides}
-      /> */}
+      {/* Mobile Layout - Single Carousel */}
+      <div className="mobile-carousel">
+        {leftImages.map((img, idx) => (
+          <div
+            key={idx}
+            className={`carousel-slide ${idx === currentSlide ? "active" : ""}`}
+          >
+            <img src={img} alt={`Mobile ${idx + 1}`} />
+            <div className="overlay"></div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
