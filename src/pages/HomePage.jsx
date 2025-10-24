@@ -11,6 +11,7 @@ import UpcomingSection from "../components/UpcomingSection";
 import WhatWeOfferSection from "../components/WhatWeOfferSection";
 import SuccessStories from "../components/SuccessStories";
 import Footer from "../components/Footer";
+import PlayVideoSection from "../components/PlayVideoSection";
 
 const HomePage = () => {
   return (
@@ -49,6 +50,9 @@ const HomePage = () => {
 
       {/* Benefits Section */}
       <BenefitsSection />
+
+      {/* Play Video Section */}
+      <PlayVideoSection />
 
       {/* Residential Section */}
       <ResidentialSection />

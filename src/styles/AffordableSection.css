@@ -211,17 +211,18 @@
   }
 
   .hero-image {
-    width: 70%;
-    height: 80%;
-    margin-left: 100px;
+    width: 80%;
+    height: 100%;
+    margin-left: 30px;
+    margin-top: 70px;
   }
 
   .image-heading {
     position: absolute;
-    bottom: 1px;
+    bottom: -22px;
     left: 340px;
     font-size: 22px;
-    padding: 20px 30px;
+    padding: 50px 20px;
     transform: none;
   }
 

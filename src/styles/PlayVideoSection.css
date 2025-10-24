@@ -1,0 +1,71 @@
+.play-video-section {
+  position: relative;
+  background-image: url('https://img.freepik.com/premium-photo/tropical-jungles-southeast-asia_480416-81.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: cover; /* make it cover entire section */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  padding: 5rem 1rem; /* adjust as needed */
+}
+
+
+.play-video-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  z-index: 1;
+}
+
+.play-video-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.play-video-section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spacer {
+  height: 2rem;
+}
+
+.spacer.huge {
+  height: 5rem;
+}
+
+.spacer.large {
+  height: 3rem;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+@media(min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
+}
+
+.play-button {
+  display: inline-block;
+  background-color: #fb281000;
+  color: #fff;
+  padding: 2rem 2.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #fff; /* white border */
+}
+
+
