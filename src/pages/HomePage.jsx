@@ -1,8 +1,8 @@
 import React from "react";
-import ImageCarousel from "../components/ImageCarousel";
+import showreel from "../assets/images/web showreel.mp4";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
-import Mission from "../components/Mission";
+import Services from "../components/Services";
 import AffordableSection from "../components/AffordableSection";
 import ClientLogos from "../components/ClientLogos";
 import BenefitsSection from "../components/BenefitsSection";
@@ -18,7 +18,22 @@ const HomePage = () => {
     <div>
       {/* Hero Section with Carousel */}
       <div style={{ position: "relative", width: "100%", height: "100vh" }}>
-        <ImageCarousel />
+        <video
+          src={showreel}
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 10,
+          }}
+        />
         <div
           style={{
             position: "absolute",
@@ -39,8 +54,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Mission Section */}
-      <Mission />
+      {/* Services Section */}
+      <Services />
 
       {/* Affordable Section */}
       <AffordableSection />
@@ -55,19 +70,19 @@ const HomePage = () => {
       <PlayVideoSection />
 
       {/* Residential Section */}
-      <ResidentialSection />
+      {/* <ResidentialSection /> */}
 
       {/*Upcoming Section */}
-      <UpcomingSection />
+      {/* <UpcomingSection /> */}
 
       {/*WhatWeOffer Section */}
       <WhatWeOfferSection />
 
       {/* SuccessStories Section */}
       <SuccessStories />
-      
+
       {/* Footer Section */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

@@ -1,16 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "../styles/Navbar.css";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isTransparent, setIsTransparent] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const threshold = window.innerHeight * 0.8; // after most of hero
+            setIsTransparent(window.scrollY < threshold);
+        };
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        window.addEventListener('resize', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        };
+    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-        <nav>
+        <nav className={isTransparent ? 'transparent' : ''}>
             <div className="logo">
                 <svg className="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>

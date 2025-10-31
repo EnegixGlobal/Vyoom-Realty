@@ -9,10 +9,19 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: rgb(31, 41, 55);
+  background-color: rgba(31, 41, 55, 0.92);
   backdrop-filter: blur(10px);
   z-index: 50;
   box-sizing: border-box;
+  transition: background-color 0.5s ease, backdrop-filter 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease;
+  will-change: background-color, backdrop-filter, box-shadow, transform;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+nav.transparent {
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
 }
 
 .logo {

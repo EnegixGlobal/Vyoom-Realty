@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-start;
   gap: 60px;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -18,24 +18,27 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  gap: 30px;
 }
 
 .image-stack {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 45px;
   margin-top: 50px;
   height: auto;
-  margin-right: 35px;
+  margin-right: 0;
+  width: 100%;
 }
 
 .stack-image {
-  width: 70%;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 5px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  margin-left: -50px;
+  margin-left: 0;
 }
 
 /* Join button left */
@@ -66,7 +69,7 @@
   color: #111;
   position: relative;
   z-index: 1;
-  margin-right: -180px;
+  margin-right: 0;
 }
 
 /* Optional overlay to improve text contrast */
@@ -133,12 +136,11 @@
   }
 
   .image-stack {
-    flex-direction: row; /* Stack images vertically */
-    gap: 20px;
+    flex-direction: column; /* stack vertically on tablets */
+    gap: 16px;
     margin-top: 30px;
-    margin-right: 280px;
-    width: 50%;
-
+    margin-right: 0;
+    width: 100%;
   }
 
   .stack-image {
@@ -147,7 +149,7 @@
   }
 
   .benefits-right {
-    margin-right: 0; /* Remove desktop negative margin */
+    margin-right: 0;
     padding: 40px 20px;
   }
 }
@@ -166,21 +168,37 @@
   }
 
   .join-btn-left {
-    width: 80%;
+    width: 100%;
+    max-width: 360px;
     padding: 12px 20px;
   }
 
-   .image-stack {
-    flex-direction: row; /* Stack images vertically */
-    gap: 20px;
-    margin-top: 30px;
-    margin-right: 20px;
-    width: 80%;
-
+  .image-stack {
+    flex-direction: row; /* place images horizontally on phones */
+    gap: 12px;
+    margin-top: 24px;
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .stack-image {
-    width: 100%; /* Full width on smaller screens */
-    margin-left: 0; /* Remove negative margin */
+    width: 48%; /* smaller side-by-side */
+    margin-left: 0;
+  }
+}
+
+/* Desktop large screens - allow overlapping/staggered style */
+@media (min-width: 1200px) {
+  .image-stack {
+    margin-right: 0; /* push images left, free space for right content */
+  }
+  .stack-image {
+    width: 60%;
+    margin-left: -24px; /* subtle stagger without covering text */
+  }
+  .benefits-right {
+    margin-right: 0; /* ensure right content is fully visible */
   }
 }

@@ -6,15 +6,27 @@ import Design15 from "../assets/images/design-15.jpg";
 const BenefitsSection = () => {
   return (
     <section className="benefits-section">
-      <div className="benefits-container">
+      <div className="benefits-container" aria-label="Benefits of Mission SHG">
         {/* Left Side - Images */}
         <div className="benefits-left">
           <div className="image-stack">
-            <img src={Design14} alt="Mission SHG 1" className="stack-image" />
-            <img src={Design15} alt="Mission SHG 2" className="stack-image" />
+            <img
+              src={Design14}
+              alt="Mission SHG community engagement"
+              className="stack-image"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src={Design15}
+              alt="Mission SHG development initiatives"
+              className="stack-image"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <a
-            href=""
+            href="#mission-shg"
             className="join-btn-left"
           >
             Join MISSION SHG
@@ -23,7 +35,7 @@ const BenefitsSection = () => {
         
 
         {/* Right Side - Text */}
-        <div className="benefits-right">
+        <div className="benefits-right" id="mission-shg">
           <span className="subtitle">MISSION SHG</span>
           <h1 className="title">Benefits of Joining MISSION SHG</h1>
           <p className="motto">
