@@ -17,39 +17,23 @@ const HomePage = () => {
   return (
     <div>
       {/* Hero Section with Carousel */}
-      <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+      <div className="relative w-full h-screen overflow-hidden">
+        {/* 🔹 Background Video */}
         <video
           src={showreel}
           autoPlay
           muted
           loop
           playsInline
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            zIndex: 10,
-          }}
+          className="absolute top-0 left-0 w-full h-full object-cover z-10"
         />
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            padding: "0 1rem",
-            zIndex: 20,
-          }}
-        >
-          <Navbar />
+
+        {/* 🔹 Overlay */}
+        <div className="absolute inset-0 bg-black/40 z-20"></div>
+
+        {/* 🔹 Navbar & Hero */}
+        <Navbar />
+        <div className="absolute top-0 left-0 z-30 flex flex-col justify-center items-start w-full h-full">
           <HeroSection />
         </div>
       </div>
