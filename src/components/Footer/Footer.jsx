@@ -8,86 +8,114 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-900 text-gray-300 font-manrope">
       {/* ===== Top Section ===== */}
       <div className="border-b border-gray-700">
         <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Column 1 */}
+          
+          {/* ===== Column 1 ===== */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-white leading-snug">
+            <h2 className="text-2xl md:text-3xl font-martel font-semibold text-white leading-snug tracking-wide">
               Making Dreams Come True of Millions of <br />
               Low & Mid-Income Groups
             </h2>
           </div>
 
-          {/* Column 2 */}
+          {/* ===== Column 2 (Address + Social) ===== */}
           <div>
-            <h4 className="text-xl font-semibold text-white mb-4">Address</h4>
-            <p className="flex items-start gap-2 mb-4 text-sm leading-relaxed">
-              <FaMapMarkerAlt className="text-blue-500 mt-1" />
-              #23, First Floor, Next to Sultan Travels, Sathgalli Circle,
-              Satellite Bus Stand, Ring Road, Mysuru – 570019, Karnataka, India
-            </p>
+            <h4 className="text-xl font-semibold text-white mb-5 font-martel">
+              Address
+            </h4>
 
-            <div className="flex space-x-4 text-lg mt-4">
-              <a
-                href="https://www.facebook.com/"
+            {/* Address Row */}
+            <div className="flex items-start gap-3 text-sm leading-relaxed text-gray-300">
+              <FaMapMarkerAlt className="text-[#c1975a] mt-1 flex-shrink-0" />
+              <p className="max-w-xs md:max-w-sm">
+                #23, First Floor, Next to Sultan Travels, Sathgalli Circle,
+                Satellite Bus Stand, Ring Road, Mysuru – 570019, Karnataka, India
+              </p>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-5 mt-6 text-lg">
+              <Link
+                to="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-blue-500 transition"
+                className="hover:text-[#c1975a] transition-transform transform hover:scale-110"
               >
                 <FaFacebookF />
-              </a>
-              <a
-                href="https://www.instagram.com/"
+              </Link>
+              <Link
+                to="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-pink-500 transition"
+                className="hover:text-[#c1975a] transition-transform transform hover:scale-110"
               >
                 <FaInstagram />
-              </a>
-              <a
-                href="https://twitter.com/"
+              </Link>
+              <Link
+                to="https://twitter.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-sky-400 transition"
+                className="hover:text-[#c1975a] transition-transform transform hover:scale-110"
               >
                 <FaTwitter />
-              </a>
+              </Link>
             </div>
           </div>
 
-          {/* Column 3 */}
+          {/* ===== Column 3 (Contact Info) ===== */}
           <div>
-            <h4 className="text-xl font-semibold text-white mb-4">Contact Us</h4>
+            <h4 className="text-xl font-semibold text-white mb-5 font-martel">
+              Contact Us
+            </h4>
 
-            <p className="flex items-center gap-2 mb-2 text-sm">
-              <FaEnvelope className="text-blue-500" />
-              <a href="mailto:johndoe@gmail.com" className="hover:text-blue-400">
-                johndoe@gmail.com
-              </a>
-            </p>
+            <div className="space-y-2 text-sm">
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="text-[#c1975a]" />
+                <Link
+                  to="mailto:johndoe@gmail.com"
+                  className="hover:text-[#c1975a] transition"
+                >
+                  vyoom@gmail.com
+                </Link>
+              </div>
 
-            <p className="flex items-center gap-2 mb-2 text-sm">
-              <FaPhoneAlt className="text-blue-500" />
-              <a href="tel:+919341235607" className="hover:text-blue-400">
-                +91 93412 35607
-              </a>
-            </p>
-            <p className="flex items-center gap-2 mb-2 text-sm">
-              <FaPhoneAlt className="text-blue-500" />
-              <a href="tel:+919845777955" className="hover:text-blue-400">
-                +91 98457 77955
-              </a>
-            </p>
-            <p className="flex items-center gap-2 text-sm">
-              <FaPhoneAlt className="text-blue-500" />
-              <a href="tel:+917022616043" className="hover:text-blue-400">
-                +91 70226 16043
-              </a>
-            </p>
+              <div className="flex items-center gap-3">
+                <FaPhoneAlt className="text-[#c1975a]" />
+                <Link
+                  to="tel:+919341235607"
+                  className="hover:text-[#c1975a] transition"
+                >
+                  +91 93412 35607
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <FaPhoneAlt className="text-[#c1975a]" />
+                <Link
+                  to="tel:+919845777955"
+                  className="hover:text-[#c1975a] transition"
+                >
+                  +91 98457 77955
+                </Link>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <FaPhoneAlt className="text-[#c1975a]" />
+                <Link
+                  to="tel:+917022616043"
+                  className="hover:text-[#c1975a] transition"
+                >
+                  +91 70226 16043
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -97,16 +125,16 @@ const Footer = () => {
         <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <ul className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
             <li>
-              <a href="/" className="hover:text-white">Home</a>
+              <Link to="/" className="hover:text-[#c1975a] transition">Home</Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-white">About Us</a>
+              <Link to="/about" className="hover:text-[#c1975a] transition">About Us</Link>
             </li>
             <li>
-              <a href="/properties" className="hover:text-white">Properties</a>
+              <Link to="/properties" className="hover:text-[#c1975a] transition">Properties</Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white">Contact Us</a>
+              <Link to="/contact" className="hover:text-[#c1975a] transition">Contact Us</Link>
             </li>
           </ul>
 

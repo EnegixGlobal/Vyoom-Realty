@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; 
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
+  const navigation = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +35,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 cursor-pointer" onClick={()=> navigation("/")}>
           <svg
             className="w-8 h-8 text-[#c1975a]"
             viewBox="0 0 24 24"
@@ -48,10 +51,21 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="/" className="hover:text-blue-600 text-black transition">Home</a>
-          <a href="#about" className="hover:text-blue-600 text-black transition">About Us</a>
-          <a href="#properties" className="hover:text-blue-600 text-black transition">Properties</a>
-          <a href="/contact" className="hover:text-blue-600 text-black transition">Contact Us</a>
+          <Link to="/" className="hover:text-blue-600 text-black transition">
+            Home
+          </Link>
+          <Link to="/about" className="hover:text-blue-600 text-black transition">
+            About Us
+          </Link>
+          <Link
+            to="/service"
+            className="hover:text-blue-600 text-black transition"
+          >
+            Service
+          </Link>
+          <Link to="/contact" className="hover:text-blue-600 text-black transition">
+            Contact Us
+          </Link>
           <button className="bg-[#c1975a] text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
             Join Us
           </button>
@@ -83,22 +97,40 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`md:hidden flex flex-col items-center bg-white text-gray-900 space-y-4 py-6 transition-all duration-500 ${
-          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          isMenuOpen
+            ? "max-h-screen opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <a href="/" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600 text-black transition">
+        <Link
+          to="/"
+          onClick={() => setIsMenuOpen(false)}
+          className="hover:text-blue-600 text-black transition"
+        >
           Home
-        </a>
-        <a href="#about" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600 text-black transition">
+        </Link>
+        <Link
+          to="/about"
+          onClick={() => setIsMenuOpen(false)}
+          className="hover:text-blue-600 text-black transition"
+        >
           About Us
-        </a>
-        <a href="#properties" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600 text-black transition">
-          Properties
-        </a>
-        <a href="/contact" onClick={() => setIsMenuOpen(false)} className="hover:text-blue-600 text-black transition">
+        </Link>
+        <Link
+          to="/service"
+          onClick={() => setIsMenuOpen(false)}
+          className="hover:text-blue-600 text-black transition"
+        >
+          Service
+        </Link>
+        <Link
+          to="/contact"
+          onClick={() => setIsMenuOpen(false)}
+          className="hover:text-blue-600 text-black transition"
+        >
           Contact Us
-        </a>
-         <button
+        </Link>
+        <button
           onClick={() => setIsMenuOpen(false)}
           className="bg-[#c1975a] text-white px-6 py-2 rounded-lg hover:bg-[#b18646] transition"
         >

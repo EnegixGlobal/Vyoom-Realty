@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        martel: ['Martel', 'serif'],
+         manrope: ['Manrope', 'sans-serif'],
+         adamina: ['Adamina'],
+         aboreto: ['Aboreto'],
+         akatab: ['Akatab', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

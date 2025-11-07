@@ -6,6 +6,7 @@ import Cart1 from "../../assets/Contact/card1.png";
 import Cart2 from "../../assets/Contact/card2.png";
 import Cart3 from "../../assets/Contact/card3.png";
 import Cart4 from "../../assets/Contact/card4.png";
+import Vd from "../../assets/Contact/Vd.mp4";
 
 const FirSection = () => {
   return (
@@ -15,18 +16,14 @@ const FirSection = () => {
         <div className="flex flex-col md:flex-row items-stretch justify-between gap-8 md:gap-10">
           {/* Left Side - Image */}
           <div className="w-full md:w-[606px] h-[360px] sm:h-[420px] md:h-[560px] relative overflow-hidden shadow-lg flex items-center">
-            <img
-              src={VideoThumb}
-              alt="Architecture vision"
+            <video
+              src={Vd}
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/10"></div>
-            <div className="absolute top-4 sm:top-6 md:top-8 left-4 sm:left-6 md:left-8 text-white">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
-                YOUR <br /> VISION,
-                <br /> OUR <br /> ARCHITECTURE
-              </h2>
-            </div>
           </div>
 
           {/* Right Side - Text + Form */}
@@ -138,11 +135,15 @@ const FirSection = () => {
 
           {/* Right Side - Image */}
           <div className="w-full md:w-[55%] h-[260px] sm:h-[340px] md:h-[430px] relative overflow-hidden flex items-center">
-            <img
-              src={Map}
-              alt="Architecture vision"
-              className="w-full h-full object-cover"
-            />
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29304.084253324083!2d85.27816907431638!3d23.351633000000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -165,6 +166,7 @@ const FirSection = () => {
               src={Cart1}
               alt="Building Icon"
               className="w-16 sm:w-20 h-16 sm:h-20 object-contain"
+              loading="lazy"
             />
             <p className="text-[#0C141C] text-center text-[14px] sm:text-[16px]">
               A passionate team of architects, planners, and interior experts.

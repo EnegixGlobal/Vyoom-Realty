@@ -10,7 +10,7 @@ import ResidentialSection from "../components/ResidentialSection";
 import UpcomingSection from "../components/UpcomingSection";
 import WhatWeOfferSection from "../components/WhatWeOfferSection";
 import SuccessStories from "../components/SuccessStories";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import PlayVideoSection from "../components/PlayVideoSection";
 
 const HomePage = () => {

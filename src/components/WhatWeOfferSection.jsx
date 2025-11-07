@@ -35,7 +35,7 @@ const WhatWeOfferSection = () => {
   ];
 
   return (
-    <section className="what-we-offer-section">
+    <section className="what-we-offer-section mt-20">
       <div className="what-we-offer-container">
         <div className="left-content">
           <p className="section-subtitle">WHAT WE OFFER</p>
