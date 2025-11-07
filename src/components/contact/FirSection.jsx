@@ -1,7 +1,6 @@
 import React from "react";
 import { MapPin, Mail, Phone } from "lucide-react";
 import VideoThumb from "../../assets/Contact/alexander.jpg";
-import Map from "../../assets/Contact/Map.jpg";
 import Cart1 from "../../assets/Contact/card1.png";
 import Cart2 from "../../assets/Contact/card2.png";
 import Cart3 from "../../assets/Contact/card3.png";
