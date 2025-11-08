@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; 
-
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
-  const navigation = useNavigate()
+  const navigation = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,9 +32,13 @@ const Navbar = () => {
           : "bg-white text-gray-900 shadow-md"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+      {/* Navbar container */}
+      <div className="container mx-auto flex items-center justify-between px-6 py-2 md:py-4">
         {/* Logo */}
-        <div className="flex items-center space-x-2 cursor-pointer" onClick={()=> navigation("/")}>
+        <div
+          className="flex items-center space-x-2 cursor-pointer"
+          onClick={() => navigation("/")}
+        >
           <svg
             className="w-8 h-8 text-[#c1975a]"
             viewBox="0 0 24 24"
@@ -54,7 +57,10 @@ const Navbar = () => {
           <Link to="/" className="hover:text-blue-600 text-black transition">
             Home
           </Link>
-          <Link to="/about" className="hover:text-blue-600 text-black transition">
+          <Link
+            to="/about"
+            className="hover:text-blue-600 text-black transition"
+          >
             About Us
           </Link>
           <Link
@@ -63,7 +69,10 @@ const Navbar = () => {
           >
             Service
           </Link>
-          <Link to="/contact" className="hover:text-blue-600 text-black transition">
+          <Link
+            to="/contact"
+            className="hover:text-blue-600 text-black transition"
+          >
             Contact Us
           </Link>
           <button className="bg-[#c1975a] text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
@@ -74,20 +83,20 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden flex flex-col text-black space-y-1 focus:outline-none"
+          className="md:hidden flex flex-col justify-center items-center text-black space-y-1 focus:outline-none"
         >
           <span
-            className={`block w-6 h-0.5 bg-current transform transition ${
+            className={`block w-6 h-0.5 bg-black transform transition ${
               isMenuOpen ? "rotate-45 translate-y-1.5" : ""
             }`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-current transition ${
+            className={`block w-6 h-0.5 bg-black transition ${
               isMenuOpen ? "opacity-0" : ""
             }`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-current transform transition ${
+            className={`block w-6 h-0.5 bg-black transform transition ${
               isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
             }`}
           ></span>
@@ -96,7 +105,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden flex flex-col items-center bg-white text-gray-900 space-y-4 py-6 transition-all duration-500 ${
+        className={`md:hidden flex flex-col items-center bg-white text-gray-900 space-y-3 py-4 transition-all duration-500 ${
           isMenuOpen
             ? "max-h-screen opacity-100"
             : "max-h-0 opacity-0 overflow-hidden"

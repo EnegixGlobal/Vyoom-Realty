@@ -26,8 +26,8 @@ const SuccessStories = () => {
         </p>
 
         <div className="cta-container">
-          <a href="#contact" className="cta-btn">
-            Join Us, Secure Your Future & Transform Lives
+          <a href="/contact" className="cta-btn">
+            Join Us, Secure Your Future & Transform 
           </a>
         </div>
 
