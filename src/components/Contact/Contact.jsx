@@ -7,7 +7,7 @@ import Cart3 from "../../assets/Contact/card3.png";
 import Cart4 from "../../assets/Contact/card4.png";
 import Vd from "../../assets/Contact/Vd.mp4";
 
-const FirSection = () => {
+const Contact = () => {
   return (
     <>
       {/* Section 1 */}
@@ -213,4 +213,4 @@ const FirSection = () => {
   );
 };
 
-export default FirSection;
+export default Contact;
