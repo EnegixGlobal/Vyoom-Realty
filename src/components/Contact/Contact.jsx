@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <>
       {/* Section 1 */}
-      <div className="w-full container mx-auto py-12 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="w-full container mx-auto py-2 sm:py-10 px-3 sm:px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row items-stretch justify-between gap-8 md:gap-10">
           {/* Left Side - Image */}
           <div className="w-full md:w-[606px] h-[360px] sm:h-[420px] md:h-[560px] relative overflow-hidden shadow-lg flex items-center">
@@ -27,7 +27,7 @@ const Contact = () => {
 
           {/* Right Side - Text + Form */}
           <div className="w-full md:flex-1 h-auto md:h-[560px] flex flex-col justify-center px-4 sm:px-6 md:px-8 py-8 md:py-10 bg-white">
-            <h2 className="font-['Martel',serif] text-[32px] sm:text-[38px] md:text-[46px] font-bold tracking-[1px] leading-[40px] sm:leading-[50px] md:leading-[60px] text-[#0C141C] mb-4">
+            <h2 className="font-['Martel',serif] text-[28px] sm:text-[38px] md:text-[46px] font-bold tracking-[1px] leading-[38px] sm:leading-[50px] md:leading-[60px] text-[#0C141C] mb-4">
               Let&apos;s Build Something <br /> Remarkable Together
             </h2>
 
@@ -90,13 +90,13 @@ const Contact = () => {
       </div>
 
       {/* Section 2 */}
-      <div className="w-full py-12 sm:py-16 px-4 sm:px-6 md:px-12 mt-8 sm:mt-12 md:mt-16">
+      <div className="w-full py-8 sm:py-16 px-3 sm:px-6 md:px-12 mt-2 sm:mt-12 md:mt-16">
         <div className="flex flex-col md:flex-row items-stretch justify-between gap-8 md:gap-10">
           {/* Left Side - Contact Card */}
           <div className="w-full md:w-[47%] h-auto md:h-[430px] flex items-center justify-center relative">
             <div
               className="w-full sm:w-[90%] bg-[#f7f7f7] rounded-[10px] shadow-[1px_1px_5px_rgba(0,0,0,0.25)] overflow-clip p-[25px] sm:p-[33px] flex flex-col justify-center gap-6"
-              style={{ willChange: "transform" }}
+              style={{ willChange: 'transform' }}
             >
               {/* Address */}
               <div className="flex items-start gap-3 sm:gap-4">
@@ -132,7 +132,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Side - Image */}
+          {/* Right Side - Map */}
           <div className="w-full md:w-[55%] h-[260px] sm:h-[340px] md:h-[430px] relative overflow-hidden flex items-center">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29304.084253324083!2d85.27816907431638!3d23.351633000000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -148,18 +148,17 @@ const Contact = () => {
       </div>
 
       {/* Section 3 */}
-
       <div className="w-full px-4 md:px-8 lg:px-16 py-10">
-        {/* 🔹 Heading */}
+        {/* Heading */}
         <div className="mb-10 text-center">
           <h2 className="font-['Martel',serif] text-[32px] sm:text-[38px] md:text-[44px] lg:text-[50px] tracking-[1px] leading-[45px] sm:leading-[50px] md:leading-[55px] lg:leading-[60px] text-[#0C141C]">
             Why Connect With Us
           </h2>
         </div>
 
-        {/* 🔹 Cards Section */}
+        {/* Cards Section */}
         <div className="flex flex-wrap justify-center items-stretch gap-6 w-full">
-          {/* 🔹 Card 1 */}
+          {/* Card 1 */}
           <div className="w-full sm:w-[48%] md:w-[45%] lg:w-[22%] h-[220px] bg-[#f7f7f7] rounded-[10px] shadow-[1px_1px_5px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center gap-4 p-6">
             <img
               src={Cart1}
@@ -172,7 +171,7 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* 🔹 Card 2 */}
+          {/* Card 2 */}
           <div className="w-full sm:w-[48%] md:w-[45%] lg:w-[22%] h-[220px] bg-[#f7f7f7] rounded-[10px] shadow-[1px_1px_5px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center gap-4 p-6">
             <img
               src={Cart2}
@@ -184,7 +183,7 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* 🔹 Card 3 */}
+          {/* Card 3 */}
           <div className="w-full sm:w-[48%] md:w-[45%] lg:w-[22%] h-[220px] bg-[#f7f7f7] rounded-[10px] shadow-[1px_1px_5px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center gap-4 p-6">
             <img
               src={Cart3}
@@ -196,7 +195,7 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* 🔹 Card 4 */}
+          {/* Card 4 */}
           <div className="w-full sm:w-[48%] md:w-[45%] lg:w-[22%] h-[220px] bg-[#f7f7f7] rounded-[10px] shadow-[1px_1px_5px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center gap-4 p-6">
             <img
               src={Cart4}

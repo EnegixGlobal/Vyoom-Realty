@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
   const navigation = useNavigate();
+  const location = useLocation();
 
+  // 🔹 Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  // 🔹 Handle transparency
   useEffect(() => {
     const handleScroll = () => {
       const threshold = window.innerHeight * 0.8;
@@ -33,14 +40,14 @@ const Navbar = () => {
       }`}
     >
       {/* Navbar container */}
-      <div className="container mx-auto flex items-center justify-between px-6 py-2 md:py-4">
+      <div className="container mx-auto flex items-center justify-between px-3 py-1 md:px-6 md:py-3">
         {/* Logo */}
         <div
           className="flex items-center space-x-2 cursor-pointer"
           onClick={() => navigation("/")}
         >
           <svg
-            className="w-8 h-8 text-[#c1975a]"
+            className="w-7 h-7 text-[#c1975a]"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -49,11 +56,11 @@ const Navbar = () => {
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
             <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
-          <span className="text-xl text-black font-bold">VYOOM</span>
+          <span className="text-lg text-black font-bold">VYOOM</span>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           <Link to="/" className="hover:text-blue-600 text-black transition">
             Home
           </Link>
@@ -61,22 +68,22 @@ const Navbar = () => {
             to="/about"
             className="hover:text-blue-600 text-black transition"
           >
-            About Us
+            About
           </Link>
           <Link
             to="/service"
             className="hover:text-blue-600 text-black transition"
           >
-            Service
+            Services
           </Link>
           <Link
             to="/contact"
             className="hover:text-blue-600 text-black transition"
           >
-            Contact Us
+            Contact
           </Link>
-          <button className="bg-[#c1975a] text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
-            Join Us
+          <button className="bg-[#c1975a] text-white px-4 py-1.5 rounded-lg hover:bg-blue-700 transition">
+            Join
           </button>
         </div>
 
@@ -105,7 +112,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden flex flex-col items-center bg-white text-gray-900 space-y-3 py-4 transition-all duration-500 ${
+        className={`md:hidden flex flex-col items-center bg-white text-gray-900 space-y-1.5 py-2 transition-all duration-500 ${
           isMenuOpen
             ? "max-h-screen opacity-100"
             : "max-h-0 opacity-0 overflow-hidden"
@@ -114,36 +121,36 @@ const Navbar = () => {
         <Link
           to="/"
           onClick={() => setIsMenuOpen(false)}
-          className="hover:text-blue-600 text-black transition"
+          className="hover:text-blue-600 text-black transition text-sm"
         >
           Home
         </Link>
         <Link
           to="/about"
           onClick={() => setIsMenuOpen(false)}
-          className="hover:text-blue-600 text-black transition"
+          className="hover:text-blue-600 text-black transition text-sm"
         >
-          About Us
+          About
         </Link>
         <Link
           to="/service"
           onClick={() => setIsMenuOpen(false)}
-          className="hover:text-blue-600 text-black transition"
+          className="hover:text-blue-600 text-black transition text-sm"
         >
-          Service
+          Services
         </Link>
         <Link
           to="/contact"
           onClick={() => setIsMenuOpen(false)}
-          className="hover:text-blue-600 text-black transition"
+          className="hover:text-blue-600 text-black transition text-sm"
         >
-          Contact Us
+          Contact
         </Link>
         <button
           onClick={() => setIsMenuOpen(false)}
-          className="bg-[#c1975a] text-white px-6 py-2 rounded-lg hover:bg-[#b18646] transition"
+          className="bg-[#c1975a] text-white px-5 py-1.5 rounded-lg hover:bg-[#b18646] transition text-sm"
         >
-          Join Now
+          Join
         </button>
       </div>
     </nav>
