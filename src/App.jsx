@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Contact from "./components/Contact/Contact";
 import HomePage from "./pages/HomePage";
@@ -9,7 +14,6 @@ import Service from "./components/OurService/Service";
 const AppContent = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
-
 
   const hideFooterRoutes = ["/"];
   const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
@@ -26,7 +30,6 @@ const AppContent = () => {
         </Routes>
       </div>
 
-      
       {shouldShowFooter && <Footer />}
     </>
   );
